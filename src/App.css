@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+
+/*common css for page*/
+section{ padding-top: 40px; }
+section .btn-primary{ border-color: #bca05a; background-color: #bca05a;}
+section .sectionTitle{ margin-bottom: 30px; font-size: 1.5rem; border-bottom: 2px solid; }
+section .sectionTitle span {position: relative;padding-bottom: 10px;display: inline-block;border-bottom: 2px solid #ecd186;margin-bottom: -2px;}
+section .card{ margin-bottom: 30px; border-radius: 15px; overflow: hidden; }
+.bodyWrapper{ margin-top: 76px; }
+/*common css for page*/
+
+/*toggle mode btn*/
+.toggle-switch { position: relative; width: 65px; display: inline-block; text-align: left; } 
+.toggle-switch .checkbox { display: none; } 
+.toggle-switch .label { display: block; overflow: hidden; cursor: pointer; border: 0 solid #bbb; border-radius: 20px; } 
+.toggle-switch .inner { display: block; width: 200%; margin-left: -100%; transition: margin 0.3s ease-in 0s; } 
+.toggle-switch .inner:before, .toggle-switch .inner:after { float: left; width: 50%; height: 22px; padding: 0; line-height: 22px; color: #fff; font-weight: bold; box-sizing: border-box; font-size: 13px; } 
+.toggle-switch .inner:before { content: "Dark"; padding-left: 10px; background-color: #000; color: #fff; } 
+.toggle-switch .inner:after { content: "Light"; padding-right: 10px; background-color: #a0a0a0; color: #fff; text-align: right; } 
+.toggle-switch .switch { display: block; width: 12px; margin: 5px; background: #fff; position: absolute; top: 0; bottom: 0; right: 40px; border: 0 solid #bbb; border-radius: 20px; transition: all 0.3s ease-in 0s; } 
+.toggle-switch .checkbox:checked + .label .inner { margin-left: 0; } 
+.toggle-switch .checkbox:checked + .label .switch { right: 0px; }
+/*toggle mode btn*/
+
+/*about us section*/
+.aboutUS .nameDesignation h1{ font-size: 50px; font-weight: bold;}
+.aboutUS .nameDesignation span.designation{ font-size: 25px; font-weight: 500; }
+.aboutUS .userImage img{ max-width: 150px; border-radius: 50px; }
+/*about us section*/
+
+/*skills*/
+.skillwrapper {width: 100%; height: 30px; line-height: 30px; color: #fff; border-radius: 15px; }
+.skillwrapper + .skillwrapper { margin-top: 25px; }
+.skillwrapper div { padding: 0 15px; border-radius: 15px; background-color: #bca05a; }
+/*skills*/
+
+/*experience*/
+.experienceDetails .row + .row { margin-top: 30px; }
+.experienceDetails .year{ text-align: right; font-size: 14px; margin-top: 12px; }
+.experienceDetails .companyQuickInfo{ font-size: 15px; }
+.experienceDetails .skillList { display: flex;flex-wrap: wrap;margin: 10px -5px; } 
+.experienceDetails .skillList .skills {flex: 0 0 auto;padding: 0px 15px;margin: 5px;border: 1px solid;border-radius: 15px;font-size: 15px;}
+.experienceDetails span.link {font-size: 15px;color: #bca05a;font-weight: 600; cursor: pointer; }
+/*experience*/
+
+/*contact*/
+section#contact {padding: 40px 0;margin-top: 40px;}
+/*contact*/
+
+@media only screen and (max-width: 991px) {
+  .navbar .container .navbar-toggler{ order: 1; }
+  .navbar .container .toggle-switch{ margin-left: auto; margin-right: 20px; }
+  .experienceDetails .year{ text-align: left; margin-top: 0px; }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 767px) {
+  .aboutUS .nameDesignation{ text-align: center; }
+  .aboutUS .userImage{ text-align: center; margin-top: 20px; }
 }
